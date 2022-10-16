@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+.board {
+  width: 640px;
+  height: 640px;
+}
+.square {
+  width: 80px;
+  height: 80px;
+  float: left;
+}
+.black__square {
+  background-color: saddlebrown;
+}
+.white__square {
+  background-color: aliceblue;
+}
+.checker {
+  top: 10px;
+  left: 10px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: absolute;
+  border: 4px solid white;
+  cursor: pointer;
+}
+.white__checker {
+  background: darkkhaki;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.black__checker {
+  background: black;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.red__square {
+  background-color: blue;
+}
