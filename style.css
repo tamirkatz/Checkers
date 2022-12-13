@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
+.flex {
+  flex: 50%;
+}
 .board {
   width: 640px;
   height: 640px;
@@ -16,8 +19,6 @@
   background-color: aliceblue;
 }
 .checker {
-  top: 10px;
-  left: 10px;
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -41,4 +42,139 @@
 }
 .red__square {
   background-color: blue;
+}
+.player {
+  flex: 40%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.75s;
+  float: left;
+  height: 640px;
+}
+main {
+  position: relative;
+  width: 100rem;
+  height: 60rem;
+  background-color: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(200px);
+  filter: blur();
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+  overflow: hidden;
+  display: flex;
+}
+/* ELEMENTS */
+.name {
+  position: relative;
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-weight: 300;
+}
+
+.score {
+  font-size: 8rem;
+  font-weight: 100;
+  color: burlywood;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.player--active {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.player--active .name {
+  font-weight: 350;
+}
+.player--active .score {
+  font-weight: 200;
+}
+
+.player--active .current {
+  opacity: 1;
+}
+
+.black__current {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  background-color: black;
+  opacity: 0.8;
+  border-radius: 9px;
+  color: #fff;
+  width: 65%;
+  height: 28%;
+  text-align: center;
+  transition: all 0.75s;
+}
+.white__current {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  background-color: darkkhaki;
+  opacity: 0.8;
+  border-radius: 9px;
+  color: #fff;
+  width: 65%;
+  height: 28%;
+  text-align: center;
+  transition: all 0.75s;
+}
+.current-label {
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  font-size: 1.7rem;
+  color: #ddd;
+}
+
+.current-score {
+  font-size: 2rem;
+}
+
+/* ABSOLUTE POSITIONED ELEMENTS */
+.btn {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #444;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 400;
+  transition: all 0.2s;
+
+  background-color: lightgrey;
+  backdrop-filter: blur(10px);
+
+  padding: 0.7rem 2.5rem;
+  border-radius: 50rem;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+}
+.btn--surrender {
+  top: 0.5rem;
+}
+
+.btn--tie {
+  top: 1rem;
+}
+.btn:active {
+  transform: translate(-50%, 3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+.btn:focus {
+  outline: none;
+}
+.player--winner {
+  background-color: #2f2f2f;
+}
+.player--winner .name {
+  font-weight: 700;
+  color: #c7365f;
+}
+.hidden {
+  display: none;
 }
